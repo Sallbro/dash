@@ -5,7 +5,6 @@ const Singleproduct = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [data, setData] = useState('');
-    const [open, setOpen] = useState(true);
     console.log("data ", data);
     const edit_prd = () => {
         console.log("data ", data);
@@ -31,7 +30,6 @@ const Singleproduct = () => {
             if (data) {
                 console.log("data is: ", data);
                 setData(data);
-                setOpen(false);
             }
         }
         catch (e) {

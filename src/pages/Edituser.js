@@ -1,5 +1,4 @@
 import "../components/single/single.scss";
-import Notifications from "./Notifications";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 const Edituser = () => {

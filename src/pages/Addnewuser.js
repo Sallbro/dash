@@ -1,8 +1,8 @@
 import "../components/new/new.scss";
-import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Addnewuser=()=>{
+const Addnewuser = () => {
     const navigate = useNavigate();
     const [user, setUser] = useState({
         username: "", phoneno: "", email: "", password: ""
@@ -29,7 +29,7 @@ const Addnewuser=()=>{
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                      username, phoneno, email, password
+                        username, phoneno, email, password
                     })
                 });
                 const data = await res.json();
@@ -45,9 +45,9 @@ const Addnewuser=()=>{
             }
         }
     }
-    return(
+    return (
         <>
-        <div className="new">
+            <div className="new">
                 {/* <Sidebar /> */}
                 <div className="newContainer">
                     {/* <Navbar /> */}
@@ -57,8 +57,8 @@ const Addnewuser=()=>{
                     <div className="bottom">
                         <div className="left">
                             <img
-                                src= "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
-                                
+                                src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+
                                 alt=""
                             />
                         </div>
@@ -89,7 +89,7 @@ const Addnewuser=()=>{
                                         Handlechange(e);
                                     }} />
                                 </div>
-                                    
+
                                 {/* {inputs.map((input) => (
                                     <div className="formInput" key={input.id}>
                                         <label>{input.label}</label>
@@ -97,7 +97,7 @@ const Addnewuser=()=>{
                                     </div>
                                 ))} */}
                                 <button>Clear</button>
-                                <button onClick={(e)=>{
+                                <button onClick={(e) => {
                                     Add_new_user(e);
                                 }}>Send</button>
                             </form>

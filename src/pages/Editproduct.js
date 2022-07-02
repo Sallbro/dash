@@ -43,6 +43,7 @@ const Editproduct = () => {
     const Additem = () => {
         // e.preventDefault();
         if (input_itm !== '') {
+            setPrd({...prd,image_details:[...image_details,input_itm]});
             setItemss([...itemss, input_itm]);
             setInput_itm("");
         }
@@ -69,9 +70,8 @@ const Editproduct = () => {
     }, [input_itm]);
 
     useEffect(() => {
-        setPrd({...prd,image_details:itemss});
         console.log("items ", itemss);
-        console.log("prd ",prd);
+        // console.log("prd ",prd);
     }, [itemss]);
 
 

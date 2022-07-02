@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import '../components/list/list.css'
 import Buffer from "./Buffer";
@@ -6,7 +5,6 @@ import Buffer from "./Buffer";
 const Orders = () => {
   const [order, setOder] = useState([]);
   const [open, setOpen] = useState(true);
-  const navigate = useNavigate();
 
   const Get_order_data = async () => {
     try {

@@ -3,16 +3,13 @@ import { DataGrid } from "@mui/x-data-grid";
 import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 const Datatable = () => {
   const [data, setData] = useState(userRows);
-  const navigate = useNavigate();
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
-  // const adduser = () => {
-  //   navigate('/products_new_prd');
-  // }
+
   const actionColumn = [
     {
       field: "action",
