@@ -1,6 +1,5 @@
 import React, { useEffect,useState } from "react";
 import Cards from "../Cards/Cards";
-import Table from "../Table/Table";
 import BasicTable from "../Table/Table";
 import "./MainDash.css";
 const MainDash = () => {

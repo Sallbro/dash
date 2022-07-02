@@ -1,9 +1,7 @@
 import Sidebar from "../components/Sidebar/Sidebar";
-import Navbar from "../components/navbar/Navbar";
 import { Outlet } from "react-router-dom";
-// import "../components/list/list.css"
-import Datatable from "../components/datatable/Datatable";
 import "../App.css";
+
 const Mainlayout = () => {
 
     return (
@@ -13,7 +11,6 @@ const Mainlayout = () => {
                     <Sidebar />
                     <Outlet />
                 </div>
-                
             </div>
 
         </>

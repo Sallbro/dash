@@ -1,6 +1,5 @@
-// import "../components/single/single.scss";
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "../components/new/new.scss";
 const Addnewprd = () => {
     const navigate = useNavigate();
@@ -23,7 +22,8 @@ const Addnewprd = () => {
 
     const Additem = () => {
         // e.preventDefault();
-        if (input_itm != '') {
+        if (input_itm !== '') {
+            setPrd({...prd,image_details:[...itemss,input_itm]});
             setItemss([...itemss, input_itm]);
             setInput_itm("");
         }
@@ -49,9 +49,9 @@ const Addnewprd = () => {
     }, [input_itm]);
 
     useEffect(() => {
-        setPrd({ ...prd, image_details: itemss });
+        // setPrd({ ...prd, image_details: itemss });
         console.log("items ", itemss);
-        console.log("prd ", prd);
+        // console.log("prd ", prd);
     }, [itemss]);
 
     const Add_new_prd = async (e) => {
